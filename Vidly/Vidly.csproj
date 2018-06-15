@@ -259,6 +259,10 @@
     <Compile Include="Migrations\201806151018237_PopulateGenre.Designer.cs">
       <DependentUpon>201806151018237_PopulateGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806151413030_TestOnMSSQL.cs" />
+    <Compile Include="Migrations\201806151413030_TestOnMSSQL.Designer.cs">
+      <DependentUpon>201806151413030_TestOnMSSQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -287,6 +291,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\ASPMVC.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -393,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806151018237_PopulateGenre.resx">
       <DependentUpon>201806151018237_PopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806151413030_TestOnMSSQL.resx">
+      <DependentUpon>201806151413030_TestOnMSSQL.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
