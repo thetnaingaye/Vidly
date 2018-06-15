@@ -10,7 +10,7 @@ namespace Vidly.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return Redirect("/Movies");
         }
 
         public ActionResult About()
