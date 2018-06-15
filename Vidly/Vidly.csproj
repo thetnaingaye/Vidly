@@ -243,9 +243,26 @@
     <Compile Include="Migrations\201806150925089_ChangeBirthDateToNullable.Designer.cs">
       <DependentUpon>201806150925089_ChangeBirthDateToNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806150942019_AddMovieToDbset.cs" />
+    <Compile Include="Migrations\201806150942019_AddMovieToDbset.Designer.cs">
+      <DependentUpon>201806150942019_AddMovieToDbset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806151015280_AddGenreAndAddPropertiesToMovie.cs" />
+    <Compile Include="Migrations\201806151015280_AddGenreAndAddPropertiesToMovie.Designer.cs">
+      <DependentUpon>201806151015280_AddGenreAndAddPropertiesToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806151016509_AddGenreToMoive.cs" />
+    <Compile Include="Migrations\201806151016509_AddGenreToMoive.Designer.cs">
+      <DependentUpon>201806151016509_AddGenreToMoive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806151018237_PopulateGenre.cs" />
+    <Compile Include="Migrations\201806151018237_PopulateGenre.Designer.cs">
+      <DependentUpon>201806151018237_PopulateGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -319,6 +336,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -361,6 +379,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806150925089_ChangeBirthDateToNullable.resx">
       <DependentUpon>201806150925089_ChangeBirthDateToNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806150942019_AddMovieToDbset.resx">
+      <DependentUpon>201806150942019_AddMovieToDbset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806151015280_AddGenreAndAddPropertiesToMovie.resx">
+      <DependentUpon>201806151015280_AddGenreAndAddPropertiesToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806151016509_AddGenreToMoive.resx">
+      <DependentUpon>201806151016509_AddGenreToMoive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806151018237_PopulateGenre.resx">
+      <DependentUpon>201806151018237_PopulateGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

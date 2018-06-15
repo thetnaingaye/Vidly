@@ -19,9 +19,12 @@
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
-                    <td>
-                        <strong>Movie</strong>
-                    </td>
+                    <th>
+                        Movie
+                    </th>
+                    <th>
+                        Genre
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -29,7 +32,10 @@
                 {
                     <tr>
                         <td>
-                            @movie.Name
+                            <a href="/Movies/Details/@movie.id">@movie.Name</a>
+                        </td>
+                        <td>
+                            @movie.Genre.Name
                         </td>
                     </tr>
                 }
