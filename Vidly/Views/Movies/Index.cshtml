@@ -9,6 +9,7 @@
 
 <div class="container">
     <h2>Movies</h2>
+    <p><a class="btn btn-primary" href="~/Movies/New">New Movie</a></p>
 
     @if (!Model.Any())
     {
@@ -32,7 +33,7 @@
                 {
                     <tr>
                         <td>
-                            <a href="~/Movies/Details/@movie.id">@movie.Name</a>
+                            <a href="~/Movies/Edit/@movie.id">@movie.Name</a>
                         </td>
                         <td>
                             @movie.Genre.Name
