@@ -1,0 +1,44 @@
+﻿@model Vidly.ViewModels.RandomMovieViewModel
+
+
+
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+    var className = Model.Movies.Count > 1 ? "label label-primary" : null;
+}
+
+
+<div class="container">
+    <h2>Movies</h2>
+
+    @if (Model.Movies.Count == 0)
+    {
+        <p>No moives.</p>
+    }
+    else
+    {
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>
+                        <strong>Movie</strong>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var movie in Model.Movies)
+                {
+                    <tr>
+                        <td>
+                            @movie.Name
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    </div>
+
