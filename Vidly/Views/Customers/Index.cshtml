@@ -1,4 +1,4 @@
-﻿@model Vidly.ViewModels.RandomMovieViewModel
+﻿@model IEnumerable<Vidly.Models.Customer>
 @{
     ViewBag.Title = "Customers";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,7 +6,7 @@
 <div class="container">
     <h2>Customers</h2>
 
-    @if (Model.Customers == null)
+    @if (!Model.Any())
     {
         <p>We don't have any customers yet</p>
     }
@@ -22,11 +22,12 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var customer in Model.Customers)
+                @foreach (var customer in Model)
                 {
                     <tr>
                         <td>
-                            <a href="/Customers/Details/@customer.Id">@customer.Name</a>
+                            @Html.ActionLink(customer.Name,"Details","Customers", new { id = customer.Id },null)
+                           @* <a href="/Customers/Details/@customer.Id">@customer.Name</a>*@
                         </td>
                     </tr>
                 }

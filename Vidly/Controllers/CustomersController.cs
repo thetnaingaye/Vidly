@@ -28,8 +28,8 @@ namespace Vidly.Controllers
         {
             
             var viewModel = new RandomMovieViewModel();
-            viewModel.Customers = customers;
-            return View(viewModel);
+            var Customers = GetCustomers();
+            return View(customers);
         }
 
         public ActionResult Details(int id)
@@ -44,6 +44,11 @@ namespace Vidly.Controllers
                 return View(customer);
 
             }
+        }
+
+        private IEnumerable<Customer> GetCustomers()
+        {
+            return this.customers;
         }
     }
 }

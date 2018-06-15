@@ -1,20 +1,16 @@
-﻿@model Vidly.ViewModels.RandomMovieViewModel
-
+﻿@model IEnumerable<Vidly.Models.Movie>
 
 
 @{
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@{ 
-    var className = Model.Movies.Count > 1 ? "label label-primary" : null;
-}
 
 
 <div class="container">
     <h2>Movies</h2>
 
-    @if (Model.Movies.Count == 0)
+    @if (!Model.Any())
     {
         <p>No moives.</p>
     }
@@ -29,7 +25,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var movie in Model.Movies)
+                @foreach (var movie in Model)
                 {
                     <tr>
                         <td>
