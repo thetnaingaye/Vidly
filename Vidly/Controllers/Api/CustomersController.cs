@@ -23,25 +23,26 @@ namespace Vidly.Controllers.Api
         }
 
         // GET /api/customers/1
-        public Customer GetCustomer(int id)
+        public IHttpActionResult GetCustomer(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             if (customer == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
 
-            return customer;
+            return Ok(customer);
         }
 
         [HttpPost]
-        public Customer CreateCustomer(Customer customer)
+        public IHttpActionResult CreateCustomer(Customer customer)
         {
             if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return BadRequest(); ;
+
             _context.Customers.Add(customer);
             _context.SaveChanges();
 
-            return customer;
+            return Created(new Uri(Request.RequestUri+"/"+customer.Id),customer);
 
         }
 
