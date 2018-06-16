@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@if (Model.Movie == null)
+@if (Model.Movie.id == 0)
 {
     <h2>New Movie</h2>
 }
