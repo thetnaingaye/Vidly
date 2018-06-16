@@ -9,6 +9,7 @@ namespace Vidly
     {
         public static void Register(HttpConfiguration config)
         {
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
