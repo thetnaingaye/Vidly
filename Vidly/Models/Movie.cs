@@ -30,6 +30,7 @@ namespace Vidly.Models
         [Range(1,20)]
         [Display(Name = "Number in Stock")]
         public byte NumberInStock { get; set; }
+        public byte NumberAvailable { get; set; }
 
         public static readonly byte MinStock = 1;
         public static readonly byte MaxStock = 20;
