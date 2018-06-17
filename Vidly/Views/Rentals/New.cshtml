@@ -28,7 +28,7 @@
                 datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
                 remote: {
-                    url: '/api/customers?query=%QUERY',
+                    url: '/Vidly/api/customers?query=%QUERY',
                     wildcard: '%QUERY'
                 }
             });
@@ -42,6 +42,7 @@
                 source: customers
             });
         });
+  
     </script>
 
     }
