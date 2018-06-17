@@ -71,7 +71,7 @@
             });
 
             $('#movie').typeahead({
-                minLength: 2,
+                minLength: 3,
                 highlight: true
             }, {
                 name: 'movies',
@@ -81,7 +81,6 @@
                 $("#movies").append("<li class='list-group-item'>" + movie.name + "</li>");
                 $("#movie").typeahead("val", "");
                 vm.MovieIds.push(movie.id);
-  
             });
 
             $.validator.addMethod("validCustomer", function () {
