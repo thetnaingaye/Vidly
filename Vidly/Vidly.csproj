@@ -310,6 +310,7 @@
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-lumen-mod.css" />
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-paper.css" />
     <Content Include="Content\bootstrap-Sandstone.css" />
